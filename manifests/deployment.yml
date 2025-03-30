@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: yetanpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yetanpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: yetanpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: yetanpipelinesjavascriptdocker 
+          image: yecontainerregistry.azurecr.io/yetanpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
